@@ -2,7 +2,7 @@ const http = require('http')
 const url = require('url')
 const handlers = require('./handlers/index')
 
-const port = process.env.PORT || 80
+const port = 3303
 
 http
   .createServer((req, res) => {

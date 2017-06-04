@@ -43,9 +43,10 @@ input[type="submit"] {
   border-radius: 6px;
 }
 
-img {
-    display: block;
-    margin: 20px auto;
+img[name="logo"] {
+  width: 550px;
+  display: block;
+  margin: 20px auto;
 }
 
 #company-name {
@@ -55,13 +56,24 @@ img {
 }
 
 footer {
-  margin-top: 30px;
-  position:relative;
-  text-align:center;
+  display: table;
+  width: 90%; /*Optional*/
+  margin: 0 auto;
+  table-layout: fixed; /*Optional*/
+  border-spacing: 50px;
 }
 
-.left-side, .right-side {
-  display:inline-block;
-  width:30%;
-  margin:0 30px;
+.footer-content {
+  display: table-cell;
+}
+
+h3 {
+  padding: 5px;
+  border-bottom: 2px solid #a1db5a;
+  font-weight: 400;
+}
+
+p {
+  padding: 0;
+  margin-top: -10px;
 }
