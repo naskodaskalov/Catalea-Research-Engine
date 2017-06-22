@@ -2,7 +2,7 @@
   "name": "catalea-research-engine",
   "version": "0.0.1",
   "description": "The 'Catalea Research Engine' is developed to access to the SEC's EDGAR filings by corporations",
-  "main": "index.js",
+  "main": "index.js", 
   "engines": {
     "node": "8.0.0",
     "npm": "4.2.0"
