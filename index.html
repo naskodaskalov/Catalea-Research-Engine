@@ -8,13 +8,13 @@
 </head>
 <body>
     <img name="logo" src="./content/catalea-logo.png" />
-  <form action="report">
-    <input type="text" id="default" list="company-name" placeholder="enter company's name">
-    <input type="submit" value="Search" />
-  </form>
-  <datalist id="company-name">
-    {{content}}
-  </datalist>
+   <form method="POST" action="/current-report">
+      <input type="text" id="default" list="company-name" placeholder="enter company's name" name="companyName" />
+      <datalist id="company-name">
+      {{content}}
+      </datalist> 
+      <input type="submit" value="Search" />
+    </form>
 
   <footer>
     <div class="footer-content">

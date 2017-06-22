@@ -3,6 +3,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-image: url('./background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
   /*background-color: #0d497a;*/
   color: white;
 }
@@ -76,4 +78,19 @@ h3 {
 p {
   padding: 0;
   margin-top: -10px;
+}
+
+.take-report-bnt > a {
+  text-decoration: none;  
+  font-size: 20px;
+  color: white;
+}
+
+.take-report-bnt {
+  padding: 10px;
+  display: inline-block;
+  background-color: #a1db5a;
+  margin-top: 15px;
+  border: 0px;
+  border-radius: 6px;
 }

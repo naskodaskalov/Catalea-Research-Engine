@@ -9,6 +9,7 @@ module.exports = (req, res) => {
       }
 
       let companies = [ 'APPLE C CHRIS',
+        'APPLE INC',
         'APPLE COMPUTER INC/ FA',
         'APPLE COMPUTER INC',
         'APPLE CREEK ACQUISITION CORP',
