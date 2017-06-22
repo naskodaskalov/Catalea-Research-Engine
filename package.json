@@ -1,18 +1,14 @@
 {
-  "name": "web-server",
+  "name": "catalea-research-engine",
   "version": "0.0.1",
-  "description": "testing web servers",
+  "description": "The 'Catalea Research Engine' is developed to access to the SEC's EDGAR filings by corporations",
   "main": "index.js",
-  "keywords": [
-    "web",
-    "server"
-  ],
   "engines": {
     "node": "8.0.0",
     "npm": "4.2.0"
   },
-  "author": "ND",
-  "license": "MIT",
+  "author": "Nasko Daskalov",
+  "license": "GPL-3.0",
   "dependencies": {
     "awesomplete": "1.1.1",
     "querystring": "0.2.0",
