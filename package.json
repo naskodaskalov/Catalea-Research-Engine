@@ -2,9 +2,9 @@
   "name": "catalea-research-engine",
   "version": "0.0.1",
   "description": "The 'Catalea Research Engine' is developed to access to the SEC's EDGAR filings by corporations",
-  "main": "index.js", 
+  "main": "index.js",
   "engines": {
-    "node": "8.0.0",  
+    "node": "8.0.0",
     "npm": "4.2.0"
   },
   "author": "Nasko Daskalov",
@@ -13,6 +13,8 @@
     "awesomplete": "1.1.1",
     "querystring": "0.2.0",
     "request": "2.81.0",
+    "rss-parser": "2.10.0",
+    "rss-to-json": "1.0.2",
     "standard": "10.0.2",
     "xml-js": "1.3.2"
   }
