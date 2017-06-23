@@ -104,7 +104,7 @@ p {
 
 .financialsTable {
   float: right;
-  width: 60%;
+  width: 69%;
   margin-right: 30px;
 }
 
@@ -190,7 +190,7 @@ tr:nth-child(odd) td {
 }
  
 tr:nth-child(odd):hover td {
-  background:#4E5066;
+  background:#ccc;
 }
 
 tr:last-child td:first-child {

@@ -11,7 +11,42 @@
   </header>
 
   <main>
-    {{report}}
+    <div class='companyInfoTable'>
+      <div class="table-title">
+        <h3>Company info</h3>
+      </div>
+      <table class="table-fill">
+        <thead>
+          <tr>
+            <th class="text-left">Company name</th>
+            <th class="text-left">CIK Number</th>
+          </tr>
+        </thead>
+        <tbody class="table-hover">
+          <tr>
+            <td class="text-left">{{companyName}}</td>
+            <td class="text-left">{{companyCik}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class='financialsTable'>
+      <div class="table-title">
+        <h3>Financials</h3>
+      </div>
+      <table class="table-fill">
+        <thead>
+          <tr>
+            <th class="text-left">Type</th>
+            <th class="text-left">Date</th>
+            <th class="text-left">File</th>
+          </tr>
+        </thead>
+        <tbody class="table-hover">
+          {{financialFiles}}
+        </tbody>
+      </table>
+    </div>
   </main>
 
   <footer>
