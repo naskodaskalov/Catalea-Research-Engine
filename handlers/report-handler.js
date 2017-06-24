@@ -75,7 +75,7 @@ module.exports = (req, res) => {
                                 <tr>
                                   <td class="text-left">${reportType}</td>
                                   <td class="text-left">${reportPulishDate.toUTCString().slice(4, 16)}</td>
-                                  <td class="text-left"><a href="${reportTxtLink}">${feed.title}</a></td>
+                                  <td class="text-left"><a href="${feed.link}">${feed.title}</a></td>
                                 </tr>`
             }
           }
