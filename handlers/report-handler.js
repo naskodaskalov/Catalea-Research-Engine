@@ -27,7 +27,7 @@ module.exports = (req, res) => {
         result += d
       }).on('end', () => {
         let name = parser.parse(result)
-        currentCompanyName = name.companyName
+        currentCompanyName = name.companyName.toUpperCase()
         companyInfo.companyName = currentCompanyName
       })
 
@@ -51,14 +51,23 @@ module.exports = (req, res) => {
             return
           }
           parsedFeed = parsed.feed.entries
+          let lastYearUrl = parsedFeed[0].link
+          // parserRss.parseURL(lastYearUrl, function (err, linkParsed) {
+          //   if (err) {
+          //     console.log(err)
+          //     return
+          //   }
 
+          //   console.log(linkParsed)
+          // })
           if (parsedFeed.length === 0) {
             financialFiles += `
                               <tr>
-                                <td class="text-left" colspan="3">No Information!</td>
+                                <td class="text-center" colspan="3">No Information!</td>
                               </tr>`
           } else {
             for (let feed of parsedFeed) {
+              // console.log(feed.link)
               let reportType = feed.title.slice(0, 4)
               let reportPulishDate = new Date(feed.pubDate)
               let reportTxtLink = feed.link.slice(0, -10) + '.txt'
