@@ -64,22 +64,17 @@ img[name="logo"] {
   margin: 20px auto;
 }
 
-#company-name {
-  height: 250px;
-  overflow-y: hidden;
-  overflow-x: scroll;
-}
-
 footer {
   display: table;
-  width: 90%; /*Optional*/
+  width: 90%;
   margin: 0 auto;
-  table-layout: fixed; /*Optional*/
+  table-layout: fixed; 
   border-spacing: 50px;
 }
 
 .footer-content {
   display: table-cell;
+  text-align: justify;
 }
 
 h3 {
@@ -118,6 +113,10 @@ p {
   float: right;
   width: 65%;
   margin-right: 30px;
+}
+
+.financialsTable a {
+  text-decoration: none;
 }
 
 /* table company info styles */
@@ -249,4 +248,51 @@ td.text-center {
 
 td.text-right {
   text-align: right;
+}
+
+@media (max-width: 1250px) {
+  .companyInfoTable {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .financialsTable {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .footer-content {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  input[type="text"] {
+    width: 90%;
+  }
+}
+
+@media (max-width: 580px) {
+  img[name="logo"] {
+    width: 100%;
+  }
+}
+div.table-title {
+  display: block;
+  /*max-width: 30%;*/
+  /*padding:5px;*/
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 20px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-transform:uppercase;
+}
+
+.table-links {
+  cursor: pointer;
 }
