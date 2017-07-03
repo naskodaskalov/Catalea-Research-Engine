@@ -81,39 +81,39 @@ module.exports = (req, res) => {
             res.end()
           } else {
             for (let feed of parsedFeed) {
-            // let txt = feed.link.slice(0, -10) + '.txt'
+              let txt = feed.link.slice(0, -10) + '-index-headers.html'
 
-            // console.log(parsedFeed[0].link)
+              // console.log(txt)
 
-            // request.get(txt, (err, response, body) => {
-            //   if (err) {
-            //     console.log(err)
-            //     return
-            //   }
-            //   // console.log(txt)
-            //   let test = feed.link.slice(0, feed.link.lastIndexOf('/'))
-            //   // console.log(txt)
-            //   // console.log(test)
-            //   // let reportTxtLink = feed.link.slice(0, -10) + '.txt'
-            //   let reportType = feed.title.slice(0, 4)
-            //   let reportPulishDate = new Date(feed.pubDate)
-            //   let currentReportHtm = test + '/'
-            //   let file = body
-            //   let findFileNameIndex = body.indexOf('<FILENAME>')
-            //   let find10KRepIndex = body.indexOf('<DESCRIPTION>')
-            //   let repFileName = ''
-            //   repFileName = file.slice(findFileNameIndex + 10, find10KRepIndex)
-            //   // console.log(repFileName)
-            //     // console.log(test + '/' + repFileName)
-            //   currentReportHtm += repFileName
-            //   // console.log(currentReportHtm)
-            //   financialFiles += `
-            //                   <tr>
-            //                     <td class='text-left'>${reportType}</td>
-            //                     <td class='text-left'>${reportPulishDate.toUTCString().slice(4, 16)}</td>
-            //                     <td class='text-left'><a href='${currentReportHtm}'>${feed.title}</a></td>
-            //                   </tr>`
-            // })
+              // request.get(txt, (err, response, body) => {
+              //   if (err) {
+              //     console.log(err)
+              //     return
+              //   }
+              //   // console.log(txt)
+              //   let test = feed.link.slice(0, feed.link.lastIndexOf('/'))
+              // // console.log(txt)
+              // // console.log(test)
+              // // let reportTxtLink = feed.link.slice(0, -10) + '.txt'
+              //   let reportType = feed.title.slice(0, 4)
+              //   let reportPulishDate = new Date(feed.pubDate)
+              //   let currentReportHtm = test + '/'
+              //   let file = body
+              //   let findFileNameIndex = body.indexOf('&lt;FILENAME&gt;')
+              //   let find10KRepIndex = body.indexOf('&lt;DESCRIPTION&gt;')
+              //   let repFileName = ''
+              //   repFileName = file.slice(findFileNameIndex + 16, find10KRepIndex)
+              //   // console.log(repFileName)
+              //   // console.log(test + '/' + repFileName)
+              //   currentReportHtm += repFileName
+              //  // console.log(currentReportHtm)
+              //   financialFiles += `
+              //                 <tr>
+              //                   <td class='text-left'>${reportType}</td>
+              //                   <td class='text-left'>${reportPulishDate.toUTCString().slice(4, 16)}</td>
+              //                   <td class='text-left'><a href='${currentReportHtm}'>${feed.title}</a></td>
+              //                 </tr>`
+              // })
 
               let reportType = feed.title.slice(0, 4)
               let reportPulishDate = new Date(feed.pubDate)
@@ -125,7 +125,6 @@ module.exports = (req, res) => {
                                 <td class='text-left'>Full financial report for ${reportPulishDate.getFullYear()} year</td>
                               </tr>`
             }
-          // <td class='text-left'><a href='${feed.link}'>${feed.title}</a></td>
             companyInfo.companyCik = currentCompanyCIK
             data = data.replace('{{companyName}}', companyInfo.companyName)
             data = data.replace('{{companyCik}}', companyInfo.companyCik)
@@ -137,6 +136,7 @@ module.exports = (req, res) => {
 
             res.write(data)
             res.end()
+          // <td class='text-left'><a href='${feed.link}'>${feed.title}</a></td>
           }
         })
       })

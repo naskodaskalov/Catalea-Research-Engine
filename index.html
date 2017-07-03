@@ -8,15 +8,16 @@
   
 </head>
 <body>
+  <main>
     <a href="../"><img name="logo" src="../content/catalea-logo.png" /></a>
-   <form method="POST" action="/current-report">
+    <form method="POST" action="/current-report">
       <input type="text" id="default" list="company-name" placeholder="enter company's name" name="companyName" />
       <datalist id="company-name">
       {{content}}
       </datalist> 
       <input type="submit" value="Search" />
     </form>
-
+  </main>
   <footer>
     <div class="footer-content">
       <h3>Designed for Better Research</h3>
@@ -37,5 +38,9 @@
       </p>
     </div>
   </footer>
+  
+  <div class="copyright">
+    <a target="_blank" href="http://developine.eu">Design and Code: <strong>Nasko Daskalov / Developine.eu</strong></a>
+  </div>
 </body>
 </html>

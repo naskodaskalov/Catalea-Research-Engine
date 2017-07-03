@@ -296,3 +296,18 @@ div.table-title {
 .table-links {
   cursor: pointer;
 }
+
+.copyright {
+  text-align: center;
+  padding: 20px;
+  color: #fafafa;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+a:visited {
+  color: #fafafa;
+}
